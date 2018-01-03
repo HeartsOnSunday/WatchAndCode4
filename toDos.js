@@ -40,6 +40,30 @@ var todoList = {
         var todo = this.todo[position];
         todo.completed = !todo.completed;
         this.displayToDos();
+    },
+    
+    toggleAll: function() {
+        var totalTodos = this.todos.length;
+        var completedTodos = 0;
+        //Get Number of Completed todos
+        for (var i = 0; i < totalTodos; i++) {
+            if (this.todos[i].completed === true) {
+                completedTodos++;
+            }
+        }
+        // Case 1: if all true, make all false
+        if (completedTodos === totalTodos) {
+            for (var i = 0; i < totalTodos; i++) {
+                this.todos[i].completed = false;
+            }
+            //Case 2: Otherwise make all true.
+        } else {
+            for (var i = 0; i < totalTodos; i++) {
+                this.todos[i].completed === true;
+            }
+        }
+        
+        this.displayTodos();
     }
 
 };
