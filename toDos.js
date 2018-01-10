@@ -67,3 +67,27 @@ var todoList = {
     }
 
 };
+
+//Button
+    var displayTodosButton = document.getElementById('displayTodosButton');
+//ToggleAllButton
+    var toggleAllButton = document.getElementById('toggleAllButton');
+    
+    
+    
+//run the display todos method onclick
+    displayTodosButton.addEventListener('click', function() {
+       todoList.displayTodos(); 
+    });
+    
+    toggleAllButton.addEventListener('click', function() {
+        todoList.toggleAll();
+    })
+    
+
+
+
+
+
+
+
