@@ -27,7 +27,7 @@ var todoList = {
         
         this.todos.forEach(function(todo) {
            if (todo.completed === true) {
-               completedTodos++
+               completedTodos++;
            } 
         });
         
@@ -43,17 +43,19 @@ var todoList = {
         //         todo.completed = true;
         //     });
         // }
-        this.todos.forEach(function(todo) {
             //case 1 if all true, make all false.
             if (completedTodos === totalTodos) {
-                todo.completed = false;
+                this.todos.forEach(function(todo) {
+                    todo.completed = false;
+                });
             // case 2: Otherwise, make all true.
             } else {
+                this.todos.forEach(function(todo) {
                 todo.completed = true;
+                });
             }
-        });
-    }
-};
+    
+
 
 
     var handlers = {
