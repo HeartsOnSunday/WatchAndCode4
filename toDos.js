@@ -17,7 +17,7 @@ var todoList = {
     },
     
     toggleCompleted: function(position) {
-        var todo = this.todo[position];
+        var todo = this.todos[position];
         todo.completed = !todo.completed;
     },
     
@@ -25,37 +25,25 @@ var todoList = {
         var totalTodos = this.todos.length;
         var completedTodos = 0;
         
+
+        
         this.todos.forEach(function(todo) {
            if (todo.completed === true) {
                completedTodos++;
            } 
         });
         
-        // // Case 1: if all true, make all false
-        // if (completedTodos === totalTodos) {
-        //     this.todos.forEach(function(todo) {
-        //         todo.completed = false;
-        //     });
-        
-        //     //Case 2: Otherwise make all true.
-        // } else {
-        //     this.todos.forEach(function(todo) {
-        //         todo.completed = true;
-        //     });
-        // }
-            //case 1 if all true, make all false.
+        this.todos.forEach(function(todo) {
+            //Case 1: if everything is true make everything false
             if (completedTodos === totalTodos) {
-                this.todos.forEach(function(todo) {
-                    todo.completed = false;
-                });
-            // case 2: Otherwise, make all true.
+                todo.completed = false;
             } else {
-                this.todos.forEach(function(todo) {
+                //Case 2: Otherwise, make everything true.
                 todo.completed = true;
-                });
             }
-    
-
+        });
+    }
+};
 
 
     var handlers = {
