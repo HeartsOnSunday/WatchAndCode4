@@ -1,23 +1,39 @@
 var todoList = {
-    todo = ["item_1", "item_2", "item_3", "item_4"], //todos Array
+    todos: [], //todos Array
 
-}
-function displaytd() {
+    displaytd: function() {
+        console.log("My ToDos", this.todos); //displaying
+},
 
-Console.log("My ToDos", todo); //displaying
-}
+    addtd: function(tdText) {
+        this.todos.push({
+            tdText: tdText,
+            completed: false,
+        });  //adding to array
+        this.displaytd();
+},
 
-function addtd(x) {
-todo.push(x);  //adding to array
-displaytd();
-}
+    changetd: function(index, tdText) {
+       // this.todos[index] = newtd; //identify and change todos by index
+       this.todos[index].tdText = tdText; 
+       this.displaytd();
+},
 
-function changetd(x, newtd) {
-todo[x] = newtd; //identify and change todos by index
-displaytd();
-}
+    deletetd: function(index) {
+    this.todos.splice(index, 1); //remove todo w/ splice (index, Qt);
+    this.displaytd();
+},
+    toggleCompletedtd: function(index) {
+        var todo = this.todos[index];
+        todo.completed = !todo.completed;
+        this.displaytd();
 
-function deletetd () {
-todo.splice(x,y); //remove todo w/ splice (index, Qt);
-displaytd();
+    }
+
+
+
+};
+
+{
+    todoText: 'item_1',
 }

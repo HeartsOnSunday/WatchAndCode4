@@ -1,7 +1,22 @@
-V1 {
+v1 {
     place to store td - Data structures
     procedure to display td's - Properties/function 
     procedure to add more td's
     procedure to change a td
     drocedure to delete avtd
+}
+
+v2 {
+    functions, parameters
+    to display(read), to add(create), to change(update), to delete(delete) //(CRUD) 
+}
+
+v3 {
+    object w array and 4 methonds
+}
+
+v4 {
+    object.addtd should add objects
+    object.changetd should change todoText property
+    object.toggleCompleted should change completed(property: y/n)
 }
