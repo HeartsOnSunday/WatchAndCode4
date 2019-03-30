@@ -2,8 +2,27 @@ var todoList = {
     todos: [], //todos Array
 
     displaytd: function() {
-        console.log("My ToDos", this.todos); //displaying
+
+           if (this.todos.length === []) {
+               console.log("Your To Do List is Empty!");
+           } else {
+            console.log("My ToDos: "); 
+            for (var i = 1; i < this.todos.length; i++)  {
+           
+           //checkif .completed is true
+           if (this.todos[i].completed === true) {
+                //print w (x)
+                console.log(i, '(X)', this.todos[i].todoText);
+
+           } else {
+               //print w ()
+               console.log(i, '( )', this.todos[i].todoText);
+           }
+        }
+    }
+
 },
+
 
     addtd: function(tdText) {
         this.todos.push({
@@ -34,6 +53,4 @@ var todoList = {
 
 };
 
-{
-    todoText: 'item_1',
-}
+

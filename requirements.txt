@@ -20,3 +20,9 @@ v4 {
     object.changetd should change todoText property
     object.toggleCompleted should change completed(property: y/n)
 }
+
+v5 {
+    obj.displaytd should show ojb.todos[x].tdText
+    obj.displaytd should tell you if obj.todos[x].tdText is empty
+     obj.displaytd should show ojb.todos[x].completed
+}
