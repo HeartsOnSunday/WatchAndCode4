@@ -1,0 +1,7 @@
+V1 {
+    place to store td - Data structures
+    procedure to display td's - Properties/function 
+    procedure to add more td's
+    procedure to change a td
+    drocedure to delete avtd
+}
