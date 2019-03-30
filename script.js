@@ -1,6 +1,7 @@
-var todo = ["item_1", "item_2", "item_3", "item_4"]; //todos Array
+var todoList = {
+    todo = ["item_1", "item_2", "item_3", "item_4"], //todos Array
 
-
+}
 function displaytd() {
 
 Console.log("My ToDos", todo); //displaying
