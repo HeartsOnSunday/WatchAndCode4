@@ -26,3 +26,8 @@ v5 {
     obj.displaytd should tell you if obj.todos[x].tdText is empty
      obj.displaytd should show ojb.todos[x].completed
 }
+
+v6 {
+    obj.toggleAll: if all true, toggle all to false
+    obj.toggleAll: if not all true toggle all to true
+}

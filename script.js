@@ -47,10 +47,33 @@ var todoList = {
         todo.completed = !todo.completed;
         this.displaytd();
 
+    },
+
+    toggleAll: function() {
+var totaltds = this.todos.length;
+var completedtds = 0;
+for (var j = 0; j <totaltds; j++) {
+    if(this.todos[i].completed === true) { //count number of completed tds
+        completedtds++; //incriment variable for each completed td to get a count
+    }
+}
+        //if all true, make all false
+        if (completedtds === totaltds) {
+            for (var k = 0; k < todos.length; k++) {
+            this.todos[k].completed = false;
+        } 
+    }     
+    //Otherwise make all true
+    else {
+            for (var l = 0; l < totaltdss; l++) {
+            this.todos[l].completed = true;
+        }
     }
 
-
+        this.displaytd();
+    }
 
 };
 
 
+ 
