@@ -1,0 +1,87 @@
+var todoList = {
+    todos: [], //todos Array
+
+    displaytd: function() {
+
+           if (this.todos.length === []) {
+               console.log("Your To Do List is Empty!");
+           } else {
+            console.log("My ToDos: "); 
+            for (var i = 1; i < this.todos.length; i++)  {
+           
+           //checkif .completed is true
+           if (this.todos[i].completed === true) {
+                //print w (x)
+                console.log(i, '(X)', this.todos[i].todoText);
+
+           } else {
+               //print w ()
+               console.log(i, '( )', this.todos[i].todoText);
+           }
+        }
+    }
+
+},
+
+
+    addtd: function(tdText) {
+        this.todos.push({
+            tdText: tdText,
+            completed: false,
+        });  //adding to array
+        this.displaytd();
+},
+
+    changetd: function(index, tdText) {
+       // this.todos[index] = newtd; //identify and change todos by index
+       this.todos[index].tdText = tdText; 
+       this.displaytd();
+},
+
+    deletetd: function(index) {
+    this.todos.splice(index, 1); //remove todo w/ splice (index, Qt);
+    this.displaytd();
+},
+    toggleCompletedtd: function(index) {
+        var todo = this.todos[index];
+        todo.completed = !todo.completed;
+        this.displaytd();
+
+    },
+
+    toggleAll: function() {
+var totaltds = this.todos.length;
+var completedtds = 0;
+for (var j = 0; j <totaltds; j++) {
+    if(this.todos[i].completed === true) { //count number of completed tds
+        completedtds++; //incriment variable for each completed td to get a count
+    }
+}
+        //if all true, make all false
+        if (completedtds === totaltds) {
+            for (var k = 0; k < this.todos.length; k++) {
+            this.todos[k].completed = false;
+        } 
+    }     
+    //Otherwise make all true
+    else {
+            for (var l = 0; l < totaltdss; l++) {
+            this.todos[l].completed = true;
+        }
+    }
+
+        this.displaytd();
+    }
+
+};
+
+var displayTodosButton = document.getElementById('displayTodosButton');
+var toggleAllButton = document.getElementById('toggleAllButton');
+
+displayTodosButton.addEventListener('click', function() {
+    todoList.displaytd();
+})
+
+toggleAllButton.addEventListener('click', function() {
+    todoList.toggleAll();
+})
