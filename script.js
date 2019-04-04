@@ -75,13 +75,17 @@ for (var j = 0; j <totaltds; j++) {
 
 };
 
-var displayTodosButton = document.getElementById('displayTodosButton');
-var toggleAllButton = document.getElementById('toggleAllButton');
 
-displayTodosButton.addEventListener('click', function() {
-    todoList.displaytd();
-})
-
-toggleAllButton.addEventListener('click', function() {
-    todoList.toggleAll();
-})
+var handlers = {
+    displaytds: function() {
+        todoList.displaytd();
+    },
+    toggleAll: function() {
+        todoList.toggleAll();
+},
+    addtd: function() {
+        var addtdTextInput = document.getElementById('addtd');
+        todoList.addtd(addtdTextInput.value);
+        addtdTextInput.value = '';
+    }
+}
