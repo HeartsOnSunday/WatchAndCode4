@@ -53,13 +53,13 @@ var todoList = {
 var totaltds = this.todos.length;
 var completedtds = 0;
 for (var j = 0; j <totaltds; j++) {
-    if(this.todos[i].completed === true) { //count number of completed tds
+    if(this.todos[j].completed === true) { //count number of completed tds
         completedtds++; //incriment variable for each completed td to get a count
     }
 }
         //if all true, make all false
         if (completedtds === totaltds) {
-            for (var k = 0; k < todos.length; k++) {
+            for (var k = 0; k < this.todos.length; k++) {
             this.todos[k].completed = false;
         } 
     }     
@@ -84,7 +84,7 @@ var handlers = {
         todoList.toggleAll();
 },
     addtd: function() {
-        var addtdTextInput = document.getElementById('addtd');
+        var addtdTextInput = document.getElementById('add');
         todoList.addtd(addtdTextInput.value);
         addtdTextInput.value = '';
     }
