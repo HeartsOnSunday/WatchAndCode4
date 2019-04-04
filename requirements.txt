@@ -36,4 +36,6 @@ v7 {
     include buttons w/ onclick events for display todos and toggle all todos
 }
 
-//well that was a waste!
+debugging {
+    use the debugger to test your code
+}
