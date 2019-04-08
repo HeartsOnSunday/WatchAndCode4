@@ -8,3 +8,18 @@
 #Please Enjoy
 
 
+FS.writefile to write each person into a unique file. name each file the employee's id field.
+
+
+fs write file ( "STRING", data, (error) = )
+    create file name rows[0][0]+rows[0][3]".html"
+    write <!Doc...>
+    <html>
+    <head>
+    .....
+    <body>
+    <h1>Employee Report</h1>
+
+
+
+   

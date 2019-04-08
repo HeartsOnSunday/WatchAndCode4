@@ -12,11 +12,11 @@ var todoList = {
            //checkif .completed is true
            if (this.todos[i].completed === true) {
                 //print w (x)
-                console.log(i, '(X)', this.todos[i].todoText);
+                console.log(i, '(X)', this.todos[i].tdText);
 
            } else {
                //print w ()
-               console.log(i, '( )', this.todos[i].todoText);
+               console.log(i, '( )', this.todos[i].tdText);
            }
         }
     }
@@ -29,6 +29,7 @@ var todoList = {
             tdText: tdText,
             completed: false,
         });  //adding to array
+        console.log(this.todos);
         this.displaytd();
 },
 
@@ -65,7 +66,7 @@ for (var j = 0; j <totaltds; j++) {
     }     
     //Otherwise make all true
     else {
-            for (var l = 0; l < totaltdss; l++) {
+            for (var l = 0; l < totaltds; l++) {
             this.todos[l].completed = true;
         }
     }
@@ -87,5 +88,13 @@ var handlers = {
         var addtdTextInput = document.getElementById('add');
         todoList.addtd(addtdTextInput.value);
         addtdTextInput.value = '';
+    },
+    changetd: function() {
+        var changetdPositionInput = document.getElementById("changetdPositionInput");
+        var changetdTextInput = document.getElementById('changetdTextInput');
+        todoList.changetd();
+        changetdPositionInput.value = "";
+        changetdTextInput.value = "";
     }
+
 }
